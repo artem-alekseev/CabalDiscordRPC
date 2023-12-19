@@ -51,7 +51,7 @@ DWORD CharacterNameOffset = 0x3FB4;
 void InitializeDiscord() {
 	DiscordEventHandlers Handle;
 	memset(&Handle, 0, sizeof(Handle));
-	Discord_Initialize("1185990293393244160", &Handle, 1, NULL);
+	Discord_Initialize("YOUR API KEY", &Handle, 1, NULL);
 }
 
 DWORD WINAPI DiscordInit() {
@@ -89,7 +89,7 @@ DWORD WINAPI DiscordInit() {
 		discordPresence.details = location.c_str();
 		discordPresence.state = character.c_str();
 		discordPresence.startTimestamp = Elapsed_time;
-		discordPresence.largeImageKey = "logo";
+		discordPresence.largeImageKey = "IMAGE TAG";
 		discordPresence.largeImageText = "IMAGE TEXT";
 		//discordPresence.smallImageKey = "IMAGE TAG";
 		//discordPresence.smallImageText = "IMAGE TEXT";
