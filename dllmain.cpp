@@ -52,6 +52,17 @@ DWORD WINAPI DiscordInit() {
 	DiscordRichPresence discordPresence;
 	memset(&discordPresence, 0, sizeof(discordPresence));
 
+	discordPresence.startTimestamp = Elapsed_time;
+	discordPresence.largeImageKey = "IMAGE TAG";
+	discordPresence.largeImageText = "IMAGE TEXT";
+	//discordPresence.smallImageKey = "IMAGE TAG";
+	//discordPresence.smallImageText = "IMAGE TEXT";
+	discordPresence.button1Label = "BTN ONE LABEL";
+	discordPresence.button1Url = "https://example1.com";
+	discordPresence.button2Label = "BTN TWO LABEL";
+	discordPresence.button2Url = "https://example2.com";
+	discordPresence.instance = 1;
+
 	while (true) {
 		if (*(DWORD*)BaseAddress != 0 && *(DWORD*)(*(DWORD*)BaseAddress + InGameOffset) != 0)
 		{
